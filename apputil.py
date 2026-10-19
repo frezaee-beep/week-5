@@ -40,7 +40,7 @@ def survival_demographics():
     result = (
         df.groupby(
             ["pclass", "sex", "age_group"],
-            observed=True
+            observed=False
         )
         .agg(
             n_passengers=("survived", "size"),
